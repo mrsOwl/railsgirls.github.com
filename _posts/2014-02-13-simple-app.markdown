@@ -46,7 +46,7 @@ We're going to create a new Rails app called *railsgirls*.
 First, let's open a terminal:
 
 * Mac OS X: Open Spotlight, type *Terminal* and click the *Terminal* application.
-* Windows: Click Start and look for *Command Prompt*, then click *Command Prompt with Ruby on Rails*.
+* Windows: Click Start and look for *Command Prompt*, then click *Command Prompt with Ruby and Rails*.
 * Linux (Ubuntu/Fedora): Search for *Terminal* on the dash and click *Terminal*.
 
 Next, type these commands in the terminal:
@@ -162,7 +162,7 @@ $
 
 When the command prompt is not visible you cannot execute new commands. If you try running `cd` or another command it will not work. To return to the normal command prompt:
 
-Hit `CTRL-C` in the terminal to quit the server.
+Hit <kbd>Ctrl</kbd>+<kbd>C</kbd> in the terminal to quit the server.
 
 **Coach:** Explain what each command does. What was generated? What does the server do? You can find more details about the special template on [GitHub](https://github.com/Ben-M/simple_scaffold).
 
@@ -191,14 +191,14 @@ The scaffold creates new files in your project directory, but to get it to work 
 <div class="os-specific">
   <div class="nix">
 {% highlight sh %}
-rake db:migrate
+rails db:migrate
 rails server
 {% endhighlight %}
   </div>
 
   <div class="win">
 {% highlight sh %}
-rake db:migrate
+rails db:migrate
 ruby bin\rails server
 {% endhighlight %}
   </div>
@@ -206,7 +206,7 @@ ruby bin\rails server
 
 Open [http://localhost:3000/ideas](http://localhost:3000/ideas) in your browser. Click around and test what you got by running these few command-line commands.
 
-Hit `CTRL-C` to quit the server again when you've clicked around a little.
+Hit <kbd>Ctrl</kbd>+<kbd>C</kbd> to quit the server again when you've clicked around a little.
 
 
 ## *3.*Design
@@ -322,14 +322,14 @@ rails generate uploader Picture
 
 At this point you need to **restart the Rails server process** in the terminal.
 
-Hit `CTRL-C` in the terminal to quit the server. Once it has stopped, you can press the up arrow to get to the last command entered, then hit enter to start the server again.
+Hit <kbd>Ctrl</kbd>+<kbd>C</kbd> in the terminal to quit the server. Once it has stopped, you can press the up arrow to get to the last command entered, then hit enter to start the server again.
 
 This is needed for the app to load the added library.
 
 Open `app/models/idea.rb` and under the line
 
 {% highlight ruby %}
-class Idea < ActiveRecord::Base
+class Idea < ApplicationRecord
 {% endhighlight %}
 
 add
@@ -427,7 +427,7 @@ Now you can open the file `app/views/pages/info.html.erb` and add information ab
 
 ## Additional Guides
 
-* Guide 0: [Handy cheatsheet for Ruby, Rails, console etc.](https://github.com/PragTob/rails-beginner-cheatsheet)
+* Guide 0: [Handy cheatsheet for Ruby, Rails, console etc.](http://www.pragtob.info/rails-beginner-cheatsheet/)
 * Guide 1: [Add commenting by Janika Liiv](/commenting)
 * Guide 2: [Put your app online with Heroku by Terence Lee](/heroku) / [Put your app online with OpenShift by Katie Miller](/openshift)
 * Guide 3: [Build a map of workshop participants by Rails Girls Berlin](http://railsgirlsberlin.de/apptutorial/)

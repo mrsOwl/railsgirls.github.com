@@ -1,9 +1,9 @@
 function saveOs(os) {
-  $.cookie("os", os, { expires: 1825, path: '/' }); // expires in 5 years
+  Cookies.get("os", os, { expires: 1825, path: '/' }); // expires in 5 years
 }
 
 function loadOs() {
-  var osFromCookie = $.cookie("os");
+  var osFromCookie = Cookies.get("os");
   if(osFromCookie) {
     $(".os-specific").find("." + osFromCookie + "-link").click();
   } else if(detectOs()) {
@@ -27,9 +27,9 @@ function detectOs() {
 }
 
 function addIcons() {
-  $("code.sh, code.bat").closest('.highlight').before('<i class="icon-small-prompt"></i>');
-  $("code.erb, code.html, code.ruby, code.css").closest('.highlight').before('<i class="icon-small-text-editor"></i>');
-  $("code.browser").closest('.highlight').before('<i class="icon-small-browser"></i>');
+  $("code.language-sh, code.language-bat").closest('.highlight').before('<i class="icon-small-prompt"></i>');
+  $("code.language-erb, code.language-html, code.language-ruby, code.language-css").closest('.highlight').before('<i class="icon-small-text-editor"></i>');
+  $("code.language-browser").closest('.highlight').before('<i class="icon-small-browser"></i>');
 }
 
 function initializeOsSwitchers() {

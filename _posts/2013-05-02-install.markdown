@@ -27,14 +27,14 @@ permalink: install
 ![Apple menu](/images/1.png "Apple menu")
 
 ### *2.* У вікні ти побачиш інформацію про версію твоєї ОС.
-Якщо номер версії починається з 10.6, 10.7, 10.8, 10.9 чи 10.10, то ця інструкція для тебе.
+Якщо номер версії починається з 10.6, 10.7, 10.8, 10.9, 10.10, 10.11 чи 10.12, то ця інструкція для тебе.
 
 
 ![About this Mac dialog](/images/2.png "About this Mac dialog")
 
 ### *3a.* Для версії OS X 10.9 та вище:
 
-Якщо у тебе версія 10.9 чи 10.10,то тобі необхідно установити homebrew та rbenv
+Якщо у тебе версія 10.9, 10.10, 10.11 чи 10.12,то тобі необхідно установити homebrew та rbenv
 
 #### *3a1.* Установи Command line tools:
 
@@ -48,13 +48,12 @@ xcode-select --install
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 {% endhighlight %}
 
-#### *3a3.* Установи [rbenv](https://github.com/sstephenson/rbenv):
+#### *3a3.* Установи [rbenv](https://github.com/rbenv/rbenv):
 
 {% highlight sh %}
 brew update
-brew install rbenv rbenv-gem-rehash ruby-build
+brew install rbenv
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.bash_profile
 source ~/.bash_profile
 {% endhighlight %}
 
@@ -63,7 +62,7 @@ source ~/.bash_profile
 Найновішу версію ruby ти можеш знайти за допомогою команди "rbenv install -l".
 
 {% highlight sh %}
-rbenv install 2.2.0
+rbenv install 2.4.2
 {% endhighlight %}
 
 Якщо у тебе з'явилась помилка
@@ -77,13 +76,13 @@ cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts Op
 #### *3a5.* Установка Ruby за замовчуванням
 
 {% highlight sh %}
-rbenv global 2.2.0
+rbenv global 2.4.2
 {% endhighlight %}
 
 #### *3a6.* Встановлюємо rails:
 
 {% highlight sh %}
-gem i rails --no-ri --no-rdoc
+gem install rails --no-document
 {% endhighlight %}
 
 ### *3b.* Якщо у тебе OS X версії 10.6, 10.7, or 10.8:
@@ -97,13 +96,7 @@ gem i rails --no-ri --no-rdoc
 Якщо версія Rails не була найновішою, ти можеш просто оновити її набравши у терміналі:
 
 {% highlight sh %}
-gem update rails --no-ri --no-rdoc
-{% endhighlight %}
-
-Для того, щоб переконатись, що все працює запустимо команду сторення додатка
-
-{% highlight sh %}
-rails new railsgirls
+gem update rails --no-document
 {% endhighlight %}
 
 ### *4.* Встановимо текстовий редактор
@@ -118,7 +111,20 @@ rails new railsgirls
 
 Відкрий [whatbrowser.org](http://whatbrowser.org) та онови свій веб оглядач, якщо у тебе не остання версія.
 
+### *6.* Перевірка середовища
+
+Для того, щоб переконатись, що все працює запустимо команду сторення додатка
+
+{% highlight sh %}
+rails new myapp
+cd myapp
+rails server
+{% endhighlight %}
+
+Відкрий `http://localhost:3000` у своєму веб оглядачі. Ти повинна побачити сторінку 'Yay! You're on Rails!'.
 Це все! Тепер у тебе все необхідне для створення свого першого додатку на Ruby on Rails ;)
+
+**Coach:** We recommend to verify by using the scaffold command and inputting data with the generated page with coaches to ensure everything is working.
 
 <hr />
 
@@ -126,26 +132,57 @@ rails new railsgirls
 
 ### *1.* Встановлюємо Rails
 
-Download [RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.1.0.exe) and run it. Click through the installer using the default options.
+Download [RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.3.0.exe) and run it. Click through the installer using the default options.
 
-Відкрий `Command Prompt with Ruby on Rails` і набери:
+#### *1a.* Enable copy and paste in Windows Command Prompt
+
+For Windows 10 users:
+
+Open `Command Prompt with Ruby and Rails`.
+Right-click on the command prompt’s title bar, and choose "Properties".
+Navigate to the "experimental" tab, and check the "Enable new Ctrl key shortcuts" option (you may need to check the "Enable experimental console features" option first).
+
+For other Windows versions:
+
+To paste a text in the command prompt window you'll need to use the mouse (right-click on the window --> paste).
+
+#### *1b.* Install Rails
+
+In the `Command Prompt with Ruby and Rails`, run the following command:
 
 {% highlight sh %}
 rails -v
 {% endhighlight %}
 
-Якщо версія Rails менша ніж 4, онови Rails за допомогою команди:
+If you see the following message:
 
 {% highlight sh %}
-gem update rails --no-ri --no-rdoc
+the system cannot find the path specified
 {% endhighlight %}
 
-Для того, щоб переконатись, що все працює запустимо команду
+This can happen when the installer cannot correctly setup the paths required to run rails.
+It's nothing serious, we can fix this in different ways but the easiest is by manually installing the rails gem with the following command:
 
 {% highlight sh %}
-rails new railsgirls
-cd railsgirls
-rails server
+gem install rails bundler --no-document
+{% endhighlight %}
+
+This will (re)install rails correctly and running:
+
+{% highlight sh %}
+rails -v
+{% endhighlight %}
+
+Should print the currently installed rails version number (your version may differ):
+
+{% highlight sh %}
+Rails 5.1.1
+{% endhighlight %}
+
+If the Rails version is less than 5.1, update it using a following command:
+
+{% highlight sh %}
+gem update rails --no-document
 {% endhighlight %}
 
 ## Можливі помилки
@@ -156,8 +193,7 @@ rails server
 
 {% highlight sh %}
 Gem::RemoteFetcher::FetchError: SSL_connect returned=1 errno=0 state=SSLv3 read
-server certificate B: certificate verify failed (https://rubygems.org/gems/i18n-
-0.6.11.gem)
+server certificate B: certificate verify failed (https://rubygems.org/gems/i18n-0.6.11.gem)
 {% endhighlight %}
 
 Це означає, що у тебе старіша версія Rubygems і необхідно вручну оновити її вказуючи версію Rubygems
@@ -166,14 +202,13 @@ server certificate B: certificate verify failed (https://rubygems.org/gems/i18n-
 gem -v
 {% endhighlight %}
 
-Якщо версія нижча ніж `2.2.3` необхідно оновити її вручну:
+If it is lower than `2.6.5` you will need to manually update it:
 
-
-Спочатку завантажимо [ruby-gems-update gem](https://github.com/rubygems/rubygems/releases/download/v2.2.3/rubygems-update-2.2.3.gem). Перемісти файл у `c:\\rubygems-update-2.2.3.gem` і запусти його:
+First download the [ruby-gems-update gem](https://rubygems.org/gems/rubygems-update-2.6.11.gem). Move the file to `c:\\rubygems-update-2.6.11.gem` then run:
 
 {% highlight sh %}
-gem install --local c:\\rubygems-update-2.2.3.gem
-update_rubygems --no-ri --no-rdoc
+gem install --local c:\\rubygems-update-2.6.11.gem
+update_rubygems --no-document
 gem uninstall rubygems-update -x
 {% endhighlight %}
 
@@ -183,8 +218,15 @@ gem uninstall rubygems-update -x
 gem -v
 {% endhighlight %}
 
-Перконайся, що вона вища ніж `2.2.3`. Ще раз запусти команду, яка до того видавала помилку.
+Make sure it is equal or higher than `2.6.11`. Re-run the command that was failing previously.
 
+If you are still running into problems you can always find the latest version of rubygems online at [rubygems.org](https://rubygems.org/pages/download). If you click on **GEM** you will get the latest version.
+
+### During bundle install
+
+The `Gem::RemoteFetcher::FetchError: SSL_connect` can also occur during the `bundle install` stage when creating a new rails app.
+
+The error will make mention of [bit.ly/ruby-ssl](http://bit.ly/ruby-ssl). What is relevant for Windows users at this point is [this GitHub gist](https://gist.github.com/867550). The described manual way has proven to be successful to solve the `bundle install` error.
 
 ### 'x64_mingw' is not a valid platform` Error
 
@@ -210,13 +252,39 @@ gem -v
 
 Якщо ви використовуєте Windows Vista чи старіші версії, ви можете використати інший редактор [Sublime Text 2](http://www.sublimetext.com/2).
 
-### *3.* Оновлення веб оглядача
-
-Якщо ти використовуєш Internet Explorer, ми рекомендуємо установити [Firefox](mozilla.org/firefox) або [Google Chrome](google.com/chrome).
+### *3.* Update your browser
 
 Відкрий [whatbrowser.org](http://whatbrowser.org) та онови свій браузер, якщо у тебе не остання версія.
 
-Це все! Тепер у тебе все необхідне для створення свого першого додатку на Ruby on Rails ;)
+### *4.* Install Node.js
+
+* Go to [https://nodejs.org/](https://nodejs.org/) and install Node.js LTS package
+* Reopen your Rails Command Shell
+
+Check your version of node
+
+{% highlight sh %}
+node --version
+{% endhighlight %}
+
+Make sure it is displaying version number.
+
+### *5.* Check the environment
+
+Check that everything is working by running the application generator command.
+
+{% highlight sh %}
+rails new myapp
+cd myapp
+rails server
+{% endhighlight %}
+
+Go to `http://localhost:3000` in your browser, and you should see the 'Yay! You're on Rails!' page.
+
+Now you should have a working Ruby on Rails programming setup. Congrats!
+
+**Coach:** We recommend to verify by using the scaffold command and inputting data with the generated page with coaches to ensure everything is working.
+
 <hr />
 
 ## Setup for Linux
@@ -229,6 +297,7 @@ gem -v
 #### Для Ubuntu:
 
 {% highlight sh %}
+sudo apt-get install curl
 bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
 {% endhighlight %}
 
@@ -240,12 +309,10 @@ bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/
 bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-fedora.sh)
 {% endhighlight %}
 
-Для того, щоб переконатись, що все працює запустимо команду сторення додатка
+Make sure that all works well by running the application generator command.
 
 {% highlight sh %}
-rails new railsgirls
-cd railsgirls
-rails server
+rails new myapp
 {% endhighlight %}
 
 
@@ -258,9 +325,21 @@ rails server
 
 ### *3.* Оновлення браузера
 
-Відкрий [whatbrowser.org](http://whatbrowser.org) та онови свій браузер, якщо у тебе не остання версія.
+### *4.* Check the environment
+
+Check that everything is working by running the application generator command.
+
+{% highlight sh %}
+rails new myapp
+cd myapp
+rails server
+{% endhighlight %}
+
+Go to `http://localhost:3000` in your browser, and you should see the 'Yay! You're on Rails!' page.
 
 Це все! Тепер у тебе все необхідне для створення свого першого додатку на Ruby on Rails ;)
+
+**Coach:** We recommend to verify by using the scaffold command and inputting data with the generated page with coaches to ensure everything is working.
 
 <hr />
 
@@ -272,35 +351,66 @@ rails server
 
 ## Using a Cloud Service
 
-Замість того, щоб встановлювати Ruby on Rails та текстовий редактор на свій комп'ютер, ти можеш використовувати cloud service. Усе, що тобі потрібно це браузер і доступ до інернету. Ця інструкція пояснює як розпочати роботу з  [nitrous.io](https://nitrous.io). Інші сервіси можуть використовувати інші терміни, наприклад 'workspace' замість 'box', але сам процес досить схожий.
+Instead of installing Ruby on Rails and an editor on your computer, you can use a webservice for development. All you need is a browser and an internet connection. This guide explains how to get started with [codenvy.io](https://codenvy.io). If you're using a different service, they may use a different wording, but the process is usually pretty similar.
 
 ### *1.* Update your browser
 
-Якщо ти використовуєш Internet Explorer, ми рекомендуємо установити [Firefox](mozilla.org/firefox) або [Google Chrome](google.com/chrome).
+If you use Internet Explorer, we recommend installing [Firefox](mozilla.org/firefox) or [Google Chrome](google.com/chrome).
 
-Відкрий [whatbrowser.org](http://whatbrowser.org) та онови браузер до останньої версії.
+Open [whatbrowser.org](http://whatbrowser.org) and update your browser if you don't have the latest version.
 
-### *2.* Створи безкоштовний аккаунт
-Перейди за посиланням [https://nitrous.io](https://nitrous.io/) та безкоштовно зареєструйся.
+### *2.* Create an account
 
-### *3.* Установка робочого середовища для ruby on rails
-* увійди у свій nitrous профайл
-* Натисни кнопку 'Open dashboard'
-* Створи робоче середовище nitrous: вибери з шаблонів Ruby/Rails  - все решта залиши без змін. Ти також можеш змінити назву свого середовища.
-* Зачекай поки підготується твоє середовище
+Go to [codenvy.io](https://codenvy.io) and signup for free.
 
-### *4.* Як знайти або оновити твоє середовище розробки
-*Якщо ти вперше зайшла на свій аккаунт у nitrous  - пропусти цей крок. Він тобі знадобиться, коли ти повторно заходитимеш.
-* Ти можеш знайти своє середовище у розділі dashboard або вибравши 'Boxes' у верхньому меню
-* Вибери своє середовище зі списку
-* Якщо ти довший час не використовувала своє середовище, його могли закрити через неактивність.
-* Коли твоє середовище запустилось вибери 'IDE' щоб почати писати код
+![](/images/codenvy/create-account.jpg)
 
-### *5.* Програмуємо у середовищі
-* З лівої сторони ти побачиш дерево папок, де ти легко можеш переміщатися між файлами та папками.
-* Посередині - текстовий редактор для написання коду
-* Внизу - термінал для виконання команд
-* усе що тобі потрібно тут, у одному вікні браузера
-* Під час проходження туторіалу виконуй команди, які призначені для Linux, навіть якщо у тебе Windows OS. Твоя операційна система не важлива, оскільки всі команди виконуються у середовищі Linux.
-* Якщо у туторіалі пише перейти за адресою http://localhost:3000, перейди на вкладку 'Preview' та вибери 'Port 3000'
-* Якщо ж потрібно перейти за адресою http://localhost:3000/posts, додай '/posts' вручну до URL
+### *3.* Setup a workspace for Ruby on Rails
+
+The Ruby on Rails Workspace has all the software we need for the workshop already preinstalled. To create a workspace, log into [codenvy.io](https://codenvy.io) and click on 'Dashboard'. If no workspace has been created yet, the 'New Workspace' view is displayed.
+
+![](/images/codenvy/create-workspace-dashboard.jpg)
+
+In the 'New Workspace' view, a few settings have to be made.
+
+* 'New from blank, template, or sample project' should already be selected
+* Select 'Create new workspace from stack'
+* Select 'Ready to go Stacks'
+* Select 'Rails' Stack
+* Give the workspace a name of your choice. In the example this is 'railsgirls'.
+* Now click on 'Create' to create the workspace (it takes a moment for the process to finish)
+
+![](/images/codenvy/create-workspace.jpg)
+
+* Codeenvy creates a folder '/projects' during initialization, in which you can later put your code. It also creates a folder 'console-ruby-simple' that we do not need. You can see it in the Project Explorer. Ignore it or delete it by right-clicking on the folder.
+
+### *4.* Find and restart your workspace
+* If you've just created your project, you can probably skip these steps - they're good to know if you login to Codenvy again later
+* If you haven't used your workspace or projects in a while, they might have been shutdown due to inactivity. You will notice an empty circle displayed next to the workspace name.
+
+![](/images/codenvy/start-workspace.jpg)
+
+* In this case simply click on the name of the workspace. It will then be restarted (which can take a while) and afterwards opened.
+* If you have restarted a workspace, you need to run the `bundle` command again in the directory of your Rails project (you will learn more about the command in the app tutorial)
+
+### *5.* Coding with your project
+* On the left hand side, you find a file browser where you can navigate your directories and file
+* In the middle, you find the editor where you can modify your files
+* At the bottom, you find the terminal where you can run commands
+* Everything you need is right here in you browser window - you do not need to start an editor or terminal anywhere else
+* If you are following a guide or tutorial, use the commands for Linux even if you are on a Windows computer - your operating system does not matter, since all commands are run on your project's machine in the cloud, which is running Linux
+* If a guide or tutorial asks you to run a rails command that contains `rails` or `rake`, prepend `bundle exec` to this command, e. g. `bundle exec rails db:migrate`. Exception: the `rails new` command is not prefixed.
+* If a guide or tutorial asks you to start the rails server with `rails server` or `rails s`, append `-b 0.0.0.0` to this command so that you run `rails server -b 0.0.0.0`
+* If a guide or tutorial asks you to point your browser to something like `http://localhost:3000`, follow these instructions instead:
+
+  * Go to ‘[Workspaces](https://codenvy.io/dashboard/#/workspaces)’ and click your running workspace
+    ![](/images/codenvy/workspace-settings.jpg)
+
+  * Click ‘Runtime’, then ‘dev-machine’ to view the details
+    ![](/images/codenvy/runtime.jpg)
+
+  * Scroll down to 'Servers', and copy the Address entry in the line starting
+    with 'server-3000-tcp'
+    ![](/images/codenvy/get-workspace-ip.jpg)
+
+    For example, if the tutorial wants you to visit `http://localhost:3000/posts`, you would open the URL `http://node3.codenvy.io:33079/posts` instead.

@@ -24,7 +24,7 @@ body { padding-top: 100px; }
 body { padding-top: 60px; }
 {% endhighlight %}
 
-Також, видалимо файл `app/assets/stylesheets/scaffolds.css.scss` тому, що нам не потрібно стилю за замовчуванням,який генерує Rails.
+Також, видалимо файл `app/assets/stylesheets/scaffolds.scss` тому, що нам не потрібно стилю за замовчуванням,який генерує Rails.
 
 Тепер онови сторінку [http://localhost:3000/ideas](http://localhost:3000/ideas). Поки великих змін ти ще не побачиш, але це підготовка для наступних кроків.
 
@@ -58,7 +58,7 @@ body { padding-top: 60px; }
   <div class="row">
     <% group.compact.each do |idea| %>
       <div class="col-md-4">
-        <%= image_tag idea.picture_url, width: '100%' if idea.picture.present?%>
+        <%= image_tag idea.picture_url, width: '100%' if idea.picture.present? %>
         <h4><%= link_to idea.name, idea %></h4>
         <%= idea.description %>
       </div>
@@ -105,4 +105,3 @@ body { padding-top: 60px; }
 * Використаймо щойно набуті навики та змінимо дизайн для форми додавання нової ідеї.
 * Додамо або змінимо дизайн додатка за нашим бажанням. Add more design to the pages as you wish
 * Перейдемо до інших туторіалів, щоб дізнатись більше про Rails
-

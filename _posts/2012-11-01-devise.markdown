@@ -39,7 +39,7 @@ rails g devise:install
 
 Перевіримо, чи у нас описані url опції за замовчуванням. Відкриємо `config/environments/development.rb` та додамо:
 {% highlight ruby %}
-   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 {% endhighlight %}
 
 перед словом `end`.
@@ -72,7 +72,7 @@ rails g devise:install
 Ми використаємо bundled generator script для того, щоб створити модель користувача.
 {% highlight sh %}
    rails g devise user
-   rake db:migrate
+   rails db:migrate
 {% endhighlight %}
 
 **Наставник:** Пояснити що було згенеровано. Що таке поля?
@@ -98,6 +98,7 @@ rails g devise:install
   <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
+</p>
 {% endhighlight %}
 прямо над рядками
 {% highlight erb %}

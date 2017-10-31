@@ -18,7 +18,7 @@ rails g scaffold comment user_name:string body:text idea_id:integer
 {% endhighlight %}
 Ця команда створить, зокрема, сценарій *міграції*, що "повідомить" базу даних про те, що створюється нова таблиця з коментарями. Цю міграцію треба виконати, запустивши в терміналі команду
 {% highlight sh %}
-rake db:migrate
+rails db:migrate
 {% endhighlight %}
 
 ## *2.*Додаємо зв'язки між моделями
@@ -28,7 +28,7 @@ rake db:migrate
 
 Відкрий файл `app/models/idea.rb` та одразу після рядка
 {% highlight ruby %}
-class Idea < ActiveRecord::Base
+class Idea < ApplicationRecord
 {% endhighlight %}
 додай
 {% highlight ruby %}
@@ -37,7 +37,7 @@ has_many :comments
 
 Моделі 'коментар' також потрібно вказати, що вона належить до 'ідеї' (звісно, що так - коментар не може існувати сам по собі). Отже, відкрий файл `app/models/comment.rb` та після рядка
 {% highlight ruby %}
-class Comment < ActiveRecord::Base
+class Comment < ApplicationRecord
 {% endhighlight %}
 
 додай
@@ -58,20 +58,15 @@ belongs_to :idea
 <% @comments.each do |comment| %>
   <div>
     <strong><%= comment.user_name %></strong>
-    <br />
+    <br>
     <p><%= comment.body %></p>
     <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
   </div>
 <% end %>
-<%= render 'comments/form' %>
+<%= render partial: 'comments/form', locals: { comment: @comment } %>
 {% endhighlight %}
 
-У контролері `app/controllers/ideas_controller.rb` до екшена 'show' після рядка
-{% highlight ruby %}
-@idea = Idea.find(params[:id])
-{% endhighlight %}
-
-додай цей фрагмент коду:
+У контролері `app/controllers/ideas_controller.rb` до екшена 'show' додай цей фрагмент коду:
 {% highlight ruby %}
 @comments = @idea.comments.all
 @comment = @idea.comments.build
@@ -80,21 +75,21 @@ belongs_to :idea
 Також відкрий файл `app/views/comments/_form.html.erb` та після
 {% highlight erb %}
   <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
+    <%= form.label :body %><br>
+    <%= form.text_area :body, id: :comment_body %>
   </div>
 {% endhighlight %}
 
 додай рядок
 {% highlight erb %}
-<%= f.hidden_field :idea_id %>
+<%= form.hidden_field :idea_id %>
 {% endhighlight %}
 
 і ще видали кілька зайвих рядків:
 {% highlight erb %}
 <div class="field">
-  <%= f.label :idea_id %><br>
-  <%= f.number_field :idea_id %>
+  <%= form.label :idea_id %><br>
+  <%= form.number_field :idea_id, id: :comment_idea_id %>
 </div>
 {% endhighlight %}
 

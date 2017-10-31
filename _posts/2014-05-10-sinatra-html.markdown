@@ -4,6 +4,8 @@ title: Coffee List Display
 permalink: sinatra-html
 ---
 
+# Coffee List Display
+
 *Created by Tim McEwan, [@tjmcewan](https://twitter.com/tjmcewan)*
 
 Using `.inspect` works for debugging, but we don’t want to use it in production. For one thing, it’s really hard to style the output. Let’s wrap our coffee list in proper HTML.
@@ -36,7 +38,7 @@ Write something to turn the `$coffees` global variable into HTML that looks like
 
 **Hint:** Remember, the `$coffees` variable is an array of hashes.
 
-We’ll want to loop over the `$coffees` array and turn each hash into an HTML string, surrounded by `<div>`s, which should then be all joined together with `<br/>`s. We’ll also need to ensure we’re returning a string.
+We’ll want to loop over the `$coffees` array and turn each hash into an HTML string, surrounded by `<div>`s, which should then be all joined together with `<br>`s. We’ll also need to ensure we’re returning a string.
 
 For some solution ideas, [check this out](http://tjmcewan.github.io/coffeecalc/snippets/coffees_html.rb.txt).
 
