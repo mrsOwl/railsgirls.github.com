@@ -63,7 +63,9 @@ permalink: app
     {% endhighlight %}
 
     <div>
-        <p>You can verify that a directory named <code>projects</code> was created by running the list command: <code>ls</code>. You should see the <code>projects</code> directory in the output. Now you want to change the directory you are currently in to the <code>projects</code> folder by running:</p>
+        <p>
+            Ти можеш перевірити, що папка <code>projects</code> створена, запустивши таку команду: <code>ls</code>. Ти мав би побачити папку <code>projects</code> в терміналі. Тепер ти можеш перейти в папку <code>projects</code>, запустивши команду:
+        </p>
     </div>
 
     {% highlight sh %}
@@ -71,28 +73,35 @@ permalink: app
     {% endhighlight %}
 
     <div>
-        <p>You can verify you are now in an empty directory or folder by again running the <code>ls</code> command. Now you want to create a new app called <code>railsgirls</code> by running:</p>
+        <p>
+            Можеш перевірити, чи ти в пустій папці, запустивши знову команду <code>ls</code>. Тепер створимо новий застосунок з назвою <code>railsteens</code>, запустивши команду:
+        </p>
     </div>
 
     {% highlight sh %}
-        rails new railsgirls
+        rails new railsteens
     {% endhighlight %}
 
     <div>
-        <p>This will create a new app in the folder <code>railsgirls</code>, so we again want to change the directory to be inside of our rails app by running:</p>
+        <p>
+            Це створить новий застосунок в папці <code>railsteens</code>. Знову змінемо папку, щоб бути всередині нашого Rails застосунку, запустивши:
+        </p>
     </div>
 
     {% highlight sh %}
-        cd railsgirls
+        cd railsteens
     {% endhighlight %}
 
     <div>
-        <p>If you run <code>ls</code> inside of the directory you should see folders such as <code>app</code> and <code>config</code>. You can then start the rails server by running:</p>
+        <p>
+            Якщо запустити команду <code>ls</code> у цій папці ти побачиш папки накшталт <code>app</code> і <code>config</code>. Тепер запустимо rails сервер, виконавши наступну команду:
+        </p>
     </div>
 
     {% highlight sh %}
         rails server
     {% endhighlight %}
+  
   </div>
 
   <div class="win">
