@@ -3,7 +3,7 @@ layout: default
 title: Rails Teens App Tutorial
 permalink: app
 ---
-# Rails Teens App Tutorial
+# Rails Girls App Tutorial
 
 *Created by Vesa Vänskä, [@vesan](https://twitter.com/vesan)*
 
@@ -46,7 +46,7 @@ permalink: app
 
 ## *1.*Створення застосунку
 
-Створимо новий застосунок Rails  із назвою *railsteens*
+Створимо новий застосунок Rails із назвою *railsgirls*
 
 Спершу відкриємо териінал:
 * Mac OS X: Відкрий Spotlight, набери *Terminal* і клікни на програму *Terminal*.
@@ -74,22 +74,22 @@ cd projects
 
 <div>
     <p>
-        Перевіримо, чи ми в пустій папці, запустивши знову команду <code>ls</code>. Тепер створимо новий застосунок з назвою <code>railsteens</code>, запустивши команду:
+        Перевіримо, чи ми в пустій папці, запустивши знову команду <code>ls</code>. Тепер створимо новий застосунок з назвою <code>railsgirls</code>, запустивши команду:
     </p>
 </div>
 
 {% highlight sh %}
-rails new railsteens
+rails new railsgirls
 {% endhighlight %}
 
 <div>
     <p>
-        Це створить новий застосунок в папці <code>railsteens</code>. Знову змінемо папку, щоб бути всередині нашого Rails застосунку, запустивши:
+        Це створить новий застосунок в папці <code>railsgirls</code>. Знову змінемо папку, що бути всередині нашого Rails застосунку, запустивши:
     </p>
 </div>
 
 {% highlight sh %}
-cd railsteens
+cd railsgirls
 {% endhighlight %}
 
 <div>
@@ -121,22 +121,22 @@ cd projects
 
 <div>
     <p>
-        Перевіремо, чи ми в пустій папці, запустивши знову команду <code>dir</code>. Тепер створимо новий застосунок з назвою <code>railsteens</code>, запустивши команду:
+        Перевіремо, чи ми в пустій папці, запустивши знову команду <code>dir</code>. Тепер створимо новий застосунок з назвою <code>railsgirls</code>, запустивши команду:
     </p>
 </div>
 
 {% highlight sh %}
-rails new railsteens
+rails new railsgirls
 {% endhighlight %}
 
 <div>
     <p>
-        Це створить новий застосунок в папці <code>railsteens</code>. Знову змінемо папку, щоб бути всередині нашого Rails застосунку, запустивши:
+        Це створить новий застосунок в папці <code>railsgirls</code>. Знову змінемо папку, що бути всередині нашого Rails застосунку, запустивши:
     </p>
 </div>
 
 {% highlight sh %}
-cd railsteens
+cd railsgirls
 {% endhighlight %}
 
 <div>
