@@ -3,11 +3,12 @@ layout: default
 title: Rails Girls App Tutorial
 permalink: app
 ---
+
 # Rails Girls App Tutorial
 
 *Created by Vesa Vänskä, [@vesan](https://twitter.com/vesan)*
 
-** Переконайся, що rails встановлено.** Як це зробити, може прочитати [**тут**](/install)
+**Переконайся, що rails встановлено.** Як це зробити, може прочитати [**тут**](/install)
 
 ## Засоби
 <div class="indent" markdown="1">
