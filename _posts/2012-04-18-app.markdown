@@ -7,9 +7,9 @@ permalink: app
 
 *Created by Vesa Vänskä, [@vesan](https://twitter.com/vesan)*
 
-**Переконайся, що rails встановлено.** Як це зробити, може прочитати [**тут**](/install)
+** Переконайся, що rails встановлено.** Як це зробити, може прочитати [**тут**](/install)
 
-## Дізнайся про засоби
+## Засоби
 <div class="indent" markdown="1">
 
 <h3><i class="icon-text-editor">&nbsp;</i></h3>
@@ -40,9 +40,9 @@ permalink: app
 </div>
 
 
-### Важливо!
+### Увага!
 
-Валивою, щоб ти вибрав інструкції, що призначені для операційної системи, яку ти використовуєш: команди, які призначені для Windows дещо відрізняються від тих, які призначені для Mac  чи Linux. Якщо маєш проблеми - перевір перемикач операційних систем внизу команд. Якщо ти використовуєш хмарне оточення (наприклад, Codenvy), тобі потрібно запускати команди, що призначені для Linux, навіть, якщо у тебе комп'ютер із Windows.
+Валиво вибрати інструкції, що призначені для операційної системи, яку ти використовуєш: команди, які призначені для Windows дещо відрізняються від тих, які призначені для Mac  чи Linux. Якщо маєш проблеми - перевір перемикач операційних систем внизу команд. Якщо ти використовуєш хмарне оточення (наприклад, Codenvy), тобі потрібно запускати команди, що призначені для Linux, навіть, якщо у тебе комп'ютер із Windows.
 
 ## *1.*Створення застосунку
 
@@ -52,7 +52,7 @@ permalink: app
 * Mac OS X: Відкрий Spotlight, набери *Terminal* і клікни на програму *Terminal*.
 * Windows: Клікни Start і пошукай *Командний рядок*, потім клікни на *Командний рядок з Ruby and Rails*.
 * Linux (Ubuntu/Fedora): Пошукай  *Термінал* в даші і клікни на *Термінал*.
-* Хмарний сервіс (як-от, Codenvy): Увійди в свій акаунт, почни свій проект і переключись на IDE (за деталями дивись [інструкцію по встановленні](/install#using-a-cloud-service)). Термінал зазвичай знаходиться унизу вікна переглядача.
+* Хмарний сервіс (як-от, Codenvy): Увійди в свій акаунт і створи новий проект, і переключись на IDE (за деталями дивись [інструкцію по встановленні](/install#using-a-cloud-service)). Термінал зазвичай знаходиться унизу вікна переглядача.
 
 Тепер введи ці команди в термінал:
 
@@ -64,7 +64,7 @@ mkdir projects
 
 <div>
     <p>
-        Ти можеш перевірити, що папка <code>projects</code> створена, запустивши таку команду: <code>ls</code>. Ти мав би побачити папку <code>projects</code> в терміналі. Тепер ти можеш перейти в папку <code>projects</code>, запустивши команду:
+        Перевіремо , що папка <code>projects</code> створена, запустивши таку команду: <code>ls</code>. Маємо  побачити папку <code>projects</code> в терміналі. Тепер ти можеш перейти в папку <code>projects</code>, запустивши команду:
     </p>
 </div>
 
@@ -74,7 +74,7 @@ cd projects
 
 <div>
     <p>
-        Можеш перевірити, чи ти в пустій папці, запустивши знову команду <code>ls</code>. Тепер створимо новий застосунок з назвою <code>railsteens</code>, запустивши команду:
+        Перевіримо, чи ми в пустій папці, запустивши знову команду <code>ls</code>. Тепер створимо новий застосунок з назвою <code>railsteens</code>, запустивши команду:
     </p>
 </div>
 
@@ -94,7 +94,7 @@ cd railsteens
 
 <div>
     <p>
-        Якщо запустити команду <code>ls</code> у цій папці ти побачиш папки накшталт <code>app</code> і <code>config</code>. Тепер запустимо rails сервер, виконавши наступну команду:
+        Якщо запустити команду <code>ls</code> у цій папці побачимо папки типу <code>app</code> і <code>config</code>. Тепер запустимо rails сервер, виконавши наступну команду:
     </p>
 </div>
 
@@ -111,7 +111,7 @@ mkdir projects
 
 <div>
     <p>
-        Ти можеш перевірити, що папка <code>projects</code> створена, запустивши таку команду: <code>dir</code>. Ти мав би побачити папку <code>projects</code> в терміналі. Тепер ти можеш перейти в папку <code>projects</code>, запустивши команду:
+        Перевремо, що папка <code>projects</code> створена, запустивши таку команду: <code>dir</code>. Має бути папка <code>projects</code> в терміналі. Перейдемо в папку <code>projects</code>, запустивши команду:
     </p>
 </div>
 
@@ -121,7 +121,7 @@ cd projects
 
 <div>
     <p>
-        Можеш перевірити, чи ти в пустій папці, запустивши знову команду <code>dir</code>. Тепер створимо новий застосунок з назвою <code>railsteens</code>, запустивши команду:
+        Перевіремо, чи ми в пустій папці, запустивши знову команду <code>dir</code>. Тепер створимо новий застосунок з назвою <code>railsteens</code>, запустивши команду:
     </p>
 </div>
 
@@ -141,7 +141,7 @@ cd railsteens
 
 <div>
     <p>
-        Якщо запустити команду <code>dir</code> у цій папці ти побачиш папки накшталт <code>app</code> і <code>config</code>. Тепер запустимо rails сервер, виконавши наступну команду:
+        Якщо запустити команду <code>dir</code> у цій папці побачимо папки типу <code>app</code> і <code>config</code>. Тепер запустимо rails сервер, виконавши наступну команду:
     </p>
 </div>
 
@@ -151,11 +151,11 @@ rails server
   </div>
 </div>
 
-Відкрий <http://localhost:3000> у браузері. Якщо використовуєш хмрний сервіс (як-от, Codenvy), використовуй функцію перегляду (дивись [інструкція встановлкння](/install#using-a-cloud-service) за деталями).
+Відкрий <http://localhost:3000> у браузері. Якщо використовуєш хмарний сервіс (як-от, Codenvy), використовуй функцію перегляду (дивись [інструкція встановлкння](/install#using-a-cloud-service) за деталями).
 
 Маєш побачити сторінку з логотипом Rails і написом: "Yay! You're on Rails!", що означає - твій застосунок готовий і запущений.
 
-Зваж, у вікні терміналу помандний рядок неидно, адже ти заращ в сервері Rails, командний рядок виглядає якось так:
+Зваж, у вікні терміналу командний рядок не видно, адже ти зараз виконується сервер Rails, командний рядок виглядає якось так:
 
 <div class="os-specific">
   <div class="nix">
@@ -165,68 +165,69 @@ $
   </div>
   <div class="win">
 {% highlight sh %}
-
+>
 {% endhighlight %}
   </div>
 </div>
 
-**Tip:** Інколи у різних інструкціях ти можеш побачити команди, що написані з символом `$` напочатку. Це домовленість, що означає початок лінії, яку треба ввести у термінал.
+**Підказка:** Інколи у різних інструкціях ти можеш побачити команди, що написані з символом `$` напочатку. Це домовленість, що означає початок лінії, яку треба ввести у термінал.
 Тобі не потрібно вводити цей символ на спочатку команди. Твій командний рядок може не мати символу `$` на початку.
 
 Коли командний рядок невидимий, ти не можеш виконувати команди. Якщо ти спробуєш `cd` чи іншу команду - вони не спрацюють. Щоб повернутись до звичного режиму командної строки:
 
 Натисни <kbd>Ctrl</kbd>+<kbd>C</kbd> в вікні терміналу, що завершити роботу сервера.
 
-**Наставник:** Поясни, що кожна команда робить. Що генерується? Що сервер робить?
+**Ментор:** Поясни, що кожна команда робить. Що генерується? Що сервер робить?
 
 
-## *2.*Create Idea scaffold
+## *2.*Створення scaffold'у Ідея
 
-We're going to use Rails' scaffold functionality to generate a starting point that allows us to list, add, remove, edit, and view things; in our case ideas.
+Завдяки rails scaffold швидко згенеруємо необхідні файли, які дозволять, додавати, видаляти, редагувати і переглядати речі(ідеї, у нашому випадку).
 
-**Coach:** What is Rails scaffolding? (Explain the command, the model name and related database table, naming conventions, attributes and types, etc.) What are migrations and why do you need them?
+**Ментор:** Що таке rails scaffold (Поясни цю команду, ім'я моделі і відповідну їй таблицю бази даних, домовленості по називанню речей, як-от: атрибутів, типів і т.д. ). Що таке міграції і чому ми повинні їх використовувати?
 
 {% highlight sh %}
 rails generate scaffold idea name:string description:text picture:string
 {% endhighlight %}
 
-The scaffold creates new files in your project directory, but to get it to work properly we need to run a couple of other commands to update our database and restart the server.
+Scaffold створює нові файли в папці проекту. Щоб все запрацювало, ми повинні виконати декілька команд, що оновлять базу даних і перезавантажать сервер.
 
 {% highlight sh %}
 rails db:migrate
 rails server
 {% endhighlight %}
 
-Open <http://localhost:3000/ideas> in your browser. Cloud service (e.g. Codenvy) users need to append '/ideas' to their preview url instead (see [installation guide](/install#using-a-cloud-service)).
 
-Click around and test what you got by running these few command-line commands.
+Відкриємо <http://localhost:3000/ideas> в браузері. Користувачі хмарних сервісів (як-от, Codenvy) мають додати `/ideas` до url перегляду (деталі тут [installation guide](/install#using-a-cloud-service)).
 
-## *3.*Design
+Поглянь на результат цих команд, понатискай на посилання.
 
-**Coach:** Talk about the relationship between HTML and Rails. What part of views is HTML and what is Embedded Ruby (ERB)? What is MVC and how does this relate to it? (Models and controllers are responsible for generating the HTML views.)
+## *3.*Дизайн
 
-The app doesn't look very nice yet. Let's do something about that. We'll use the Twitter Bootstrap project to give us nicer styling really easily.
+**Ментор:** Розкажи про відношення між HTML і Rails. Яка відмінність між HTML і Embedded Ruby (ERB)? Що таке MVC? Яка частина за що відповдає?
 
-Open `app/views/layouts/application.html.erb` in your text editor and above the line
+Сайт виглядає не дуже гарно, чи не так? Давай додамо Twitter Bootstrap в твій проект, що допоможе покращити вигляд.
+
+Відкриємо `app/views/layouts/application.html.erb` в текстовому редакторі і над цією стрічкою
 
 {% highlight erb %}
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 {% endhighlight %}
 
-add
+додамо
 
 {% highlight erb %}
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.css">
 {% endhighlight %}
 
-and replace
+і замінемо це
 
 {% highlight erb %}
 <%= yield %>
 {% endhighlight %}
 
-with
+цим
 
 {% highlight erb %}
 <div class="container">
@@ -234,8 +235,7 @@ with
 </div>
 {% endhighlight %}
 
-Let's also add a navigation bar and footer to the layout. In the same file, under `<body>` add
-
+Додамо  навігацію і footer до шаблону. В цьому ж файлі під `<body>` додамо
 {% highlight html %}
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -257,7 +257,7 @@ Let's also add a navigation bar and footer to the layout. In the same file, unde
 </nav>
 {% endhighlight %}
 
-and before `</body>` add
+і перед `</body>` додамо
 
 {% highlight erb %}
 <footer>
@@ -269,7 +269,7 @@ and before `</body>` add
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.js"></script>
 {% endhighlight %}
 
-Now let's also change the styling of the ideas table. Open `app/assets/stylesheets/application.css` and at the bottom add
+Тепер змінемо вигляд таблиці з ідеями. Відкриємо `app/assets/stylesheets/application.css` і внизу сторінки додамо
 
 {% highlight css %}
 body { padding-top: 100px; }
@@ -278,153 +278,151 @@ table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
 {% endhighlight %}
 
-Now make sure you saved your files and refresh the browser to see what was changed. You can also change the HTML & CSS further.
+Переконайся, що ти зберіг змінені файли і перезавантаж сторінку в браузері. Ти можеш змінити HTML і CSS потім.
 
-**Coach:** Talk a little about CSS and layouts.
+**Ментор:** Розкажи трохи про CSS.
 
+## *4.*Додаємо зображення на сторіку.
 
-## *4.*Adding picture uploads
+Потрібно втановити програму, що дозволить завантажувати файли в rails.
 
-We need to install a piece of software to let us upload files in Rails.
-
-Open `Gemfile` in the project directory using your text editor and under the line
+Відкриємо `Gemfile` в папці проекту в редакторі і під рядком.
 
 {% highlight ruby %}
 gem 'sqlite3'
 {% endhighlight %}
 
-add
+додамо
 
 {% highlight ruby %}
 gem 'carrierwave'
 {% endhighlight %}
 
-**Coach:** Explain what libraries are and why they are useful. Describe what open source software is.
+**Ментор:** Поясни, зо таке бібліотеки і чим вони корисні. Опиши, що таке відкрите програмне забезпечення.
 
-Hit <kbd>Ctrl</kbd>+<kbd>C</kbd> in the terminal to quit the server.
+Натисни <kbd>Ctrl</kbd>+<kbd>C</kbd> в терміналі, щоб зупинити сервер.
 
-In the terminal run:
+В терміналі запустимо:
 
 {% highlight sh %}
 bundle
 {% endhighlight %}
 
-Now we can generate the code for handling uploads. In the terminal run:
+Тепер згенеруємо код для можливості завантаження файлів. В терміналі виконаємо:
 
 {% highlight sh %}
 rails generate uploader Picture
 {% endhighlight %}
 
-Please start the rails server now.
+Тепер запустимо сервер rails.
 
-Note: Some people might be using a second terminal to run the rails server continuously.
-If so you need to **restart the Rails server process** now.
-This is needed for the app to load the added library.
+Примітка: Можна запускати сервер в другому вікні терміналу.
+В будь-якому випадку тобі треба перезавантажити сервер rails.
 
-If an error is shown that the uploader cannot be found also add the following line:
+Якщо виводиться помилка, що завантажувач не може бути знайдений - додай такі рядки:
+
 {% highlight ruby %}
 gem 'net-ssh'
 {% endhighlight %}
 
-If you added this gem, please run in your terminal again:
+Якщо ти додав цей gem, виконай знову цю команду в терміналі:
 
 {% highlight sh %}
 bundle
 {% endhighlight %}
 
-Open `app/models/idea.rb` and under the line
+Відкриємо `app/models/idea.rb` і під рядком
 
 {% highlight ruby %}
 class Idea < ApplicationRecord
 {% endhighlight %}
 
-add
+додамо
 
 {% highlight ruby %}
 mount_uploader :picture, PictureUploader
 {% endhighlight %}
 
-Open `app/views/ideas/_form.html.erb` and change
+Відкриємо `app/views/ideas/_form.html.erb` і змінемо
 
 {% highlight erb %}
 <%= form.text_field :picture, id: :idea_picture  %>
 {% endhighlight %}
 
-to
+на
 
 {% highlight erb %}
 <%= form.file_field :picture, id: :idea_picture %>
 {% endhighlight %}
 
-In your browser, add new idea with a picture. When you upload a picture it doesn't look nice because it only shows a path to the file, so let's fix that.
+В браузері додамо нову ідею з картинкою. Коли ти завантажиш картинку, вона виглядає не надто гарно, бо видно тільки шлях до файлу. Давай виправимо це.
 
-Open `app/views/ideas/show.html.erb` and change
+Відкриємо `app/views/ideas/show.html.erb` і замінемо
 
 {% highlight erb %}
 <%= @idea.picture %>
 {% endhighlight %}
 
-to
+на
 
 {% highlight erb %}
 <%= image_tag(@idea.picture_url, width: 600) if @idea.picture.present? %>
 {% endhighlight %}
 
-Now refresh your browser to see what changed.
+Тепер перезавантаж сторінку в браузері, щоб побачити зміни.
 
-**Coach:** Talk a little about HTML.
+**Ментор:** Розкажи трохи про HTML.
 
 
-## *5.*Finetune the routes
+## *5.* Покращення шляхів
 
-Open <http://localhost:3000> (or your preview url, if you are using a cloud service). It still shows the "Yay! You’re on Rails!" page. Let's make it redirect to the ideas page.
+Відкриємо <http://localhost:3000> (або сторінку перегляду, якщо використовуєш хмарний сервіс). Там ще досі є напис "Yay! You’re on Rails!" на сторінці. Зробимо так, щоб посилання вело на сторінку з ідеями.
 
-Open `config/routes.rb` and after the first line add
+Відкриємо `config/routes.rb` і після першого рядка додамо:
 
 {% highlight ruby %}
 root to: redirect('/ideas')
 {% endhighlight %}
 
-Test the change by opening the root path (that is, <http://localhost:3000/> or your preview url) in your browser.
+Перевіремо зміни, відкривши корінь сайту, тобто <http://localhost:3000/>, або сторінку перегляду в браузері.
 
-**Coach:** Talk about routes, and include details on the order of routes and their relation to static files.
+**Ментор:** Розкажи про шляхи, і порядок шляхів і вдношення до статичних файлів.
 
-## Create static page in your app
+## Створимо статичну сторінку сайту
 
-Lets add a static page to our app that will hold information about the author of this application — you!
+Додамо статичну сторінку для нашого сайту, яка містить інформацію про автора цього сайту - тебе!
 
 {% highlight sh %}
 rails generate controller pages info
 {% endhighlight %}
 
-This command will create you a new folder under `app/views` called `/pages` and under that a file called `info.html.erb` which will be your info page.
+Ця команда створить нову папку в `app/views` з назвою `/pages` і у цій папці створимо файл `info.html.erb`, що буде твоєю сторінкою з інформацією.
 
-It also adds a new simple route to your routes.rb.
+Вона також додасть новий простий шлях в файлі routes.rb.
 
 {% highlight ruby %}
 get "pages/info"
 {% endhighlight %}
 
-Now you can open the file `app/views/pages/info.html.erb` and add information about you in HTML. To see your new info page, take your browser to <http://localhost:3000/pages/info> or, if you are a cloud service user, append '/pages/info' to your preview url.
+Тепер ти можеш відкрити файл `app/views/pages/info.html.erb` і додати інформацію про тебе в HTML. Щоб побачити твою нову сторінку з інформацією, відкрий в браузері <http://localhost:3000/pages/info>, або, якщо користуєшся хмарним сервісом - додай '/pages/info' в кінець посилання для перегляду.
 
-## *6+.*What next?
+## *6+.* Що тепер?
 
-* Add design using HTML &amp; CSS
-* Add ratings
-* Use CoffeeScript (or JavaScript) to add interaction
-* Add picture resizing to make loading the pictures faster
+* Додамо дизайн з HTML i CSS
+* Додамо ретинг
+* Додамо інтерактивність за допомогою JavaScript чи CoffeeScript
+* Змінемо розмір зображень, щоб пришвидшення завантаження картинок.
 
+## Додаткові інструкції
 
-## Additional Guides
-
-* Guide 0: [Handy cheatsheet for Ruby, Rails, console etc.](http://www.pragtob.info/rails-beginner-cheatsheet/)
-* Guide 1: [Add commenting by Janika Liiv](/commenting)
-* Guide 2: [Put your app online with Heroku by Terence Lee](/heroku) / [Put your app online with OpenShift by Katie Miller](/openshift) / [Put your app online with anynines](/anynines) / [Put your app online with Trucker.io](/trucker)
-* Guide 3: [Create thumbnail images for the uploads by Miha Filej](/thumbnails)
-* Guide 4: [Add design using HTML &amp; CSS by Alex Liao](/design)
-* Guide 5: [Add Authentication (user accounts) with Devise by Piotr Steininger](/devise)
-* Guide 6: [Adding profile pictures with Gravatar](/gravatar)
-* Guide 7: [Test your app with RSpec](/testing-rspec)
-* Guide 8: [Continuous Deployment with Travis-CI](/continuous-travis) / [Continuous Deployment with Codeship](/continuous) / [Continuous Deployment with Snap CI](/continuous-snap-ci)
-* Guide 9: [Go through additional explanations for the App by Lucy Bain](https://github.com/lbain/railsgirls)
-* Guide 10: [Adding a back-end with Active Admin](/backend-with-active-admin)
+* Guide 0: [Корисні команди для rails, ruby і т.д.](http://www.pragtob.info/rails-beginner-cheatsheet/)
+* Guide 1: [Додаємо коментарі](/commenting)
+* Guide 2: [Публікація сайту в інтернеті за допомогою heroku](/heroku) / [Публікація сайту в інтернеті за допомогою OpenShift](/openshift) / [Публікація сайту в інтернеті за допомогою anynines](/anynines) / [Публікація сайту в інтернеті за допомогою Trucker.io](/trucker)
+* Guide 3: [Створення зорбражень для перегляду](/thumbnails)
+* Guide 4: [Додавання дивайну з СSS i HTML](/design)
+* Guide 5: [Додавання автентифікації з Devise](/devise)
+* Guide 6: [Додавання картинок профілю з Gravatar](/gravatar)
+* Guide 7: [Тестування додатку з  RSpec](/testing-rspec)
+* Guide 8: [Continuous Deployment з Travis-CI](/continuous-travis) / [Continuous Deployment х Codeship](/continuous) / [Continuous Deployment з Snap CI](/continuous-snap-ci)
+* Guide 9: [Додаткові пояснення](https://github.com/lbain/railsgirls)
+* Guide 10: [Додавання back-end з Active Admin](/backend-with-active-admin)
