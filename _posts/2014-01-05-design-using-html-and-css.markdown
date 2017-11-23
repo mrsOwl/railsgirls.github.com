@@ -4,9 +4,9 @@ title: Add design to your App with HTML and CSS
 permalink: design-html-css
 ---
 
-## *1.*Design your header
+## *1.*Дизайн заголовка
 
-put the following code to the bottom of `app/assets/stylesheets/application.css`:
+Додайте рядки в кінець файлу `app/assets/stylesheets/application.css`:
 
 {% highlight css %}
 .navbar {
@@ -15,9 +15,10 @@ put the following code to the bottom of `app/assets/stylesheets/application.css`
 }
 {% endhighlight %}
 
-Now refresh the page and check the changes. You can try change the color or font of the header. You can check the color reference from [http://color.uisdc.com/](http://color.uisdc.com/).
 
-Then put these lines at the bottom：
+Оновiть сторінку і перевірте зміни. Ви можете змінити колір і шрифт заголовка на свій смак. Посилання на коди кольору [http://color.uisdc.com/](http://color.uisdc.com/).
+
+Після цього, помістіть ці рядки внизу файлу:
 
 {% highlight css %}
 .navbar a.brand { font-size: 18px; }
@@ -28,32 +29,31 @@ Then put these lines at the bottom：
 }
 {% endhighlight %}
 
-**Coach:** explain the 4 states of a link
 
+**Тренер:** поясніть про 4-и стани посилання
 
-## *2.*Design your table
+## *2.*Дизайн таблиці
 
-We simply use the twitter [Bootstrap](http://getbootstrap.com/) to polish our table. Find this line from app/views/ideas/index.html.erb and replace:
+Ми використовуємо twitter [Bootstrap](http://getbootstrap.com/) для дизайну нашої таблиці. Знайдіть ці рядки в файлі `app/views/ideas/index.html.erb` і замініть:
 
 {% highlight html %}
 <table>
 {% endhighlight %}
-
-with
-
+с
 {% highlight html %}
 <table class="table">
 {% endhighlight %}
 
-Modify size of the picture using the following lines
+Змініть розмір зображення, доповнивши код між рядків
 
 {% highlight erb %}
 <%= image_tag(idea.picture_url, :width => 600) if idea.picture.present? %>
 {% endhighlight %}
 
-try to change the width and see what's gonna happen
 
-add the following lines to the bottom of file app/assets/stylesheets/ideas.css.scss:
+спробуйте змінити ширину і подивіться, що станеться
+
+Додайте рядки в кінець файлу `app/assets/stylesheets/ideas.css.scss`:
 
 {% highlight css %}
 .container a:hover {
@@ -63,11 +63,13 @@ add the following lines to the bottom of file app/assets/stylesheets/ideas.css.s
 }
 {% endhighlight %}
 
-try add some background style with property `background-image`, reference to [http://subtlepatterns.com/](http://subtlepatterns.com/) for some patterns.
 
-## *3.*add style to footer
+Спробуйте додати фоновий стиль використовуючи `background-image`, посилання на патерни [http://subtlepatterns.com/](http://subtlepatterns.com/)
 
-add the lines to bottom of  app/assets/stylesheets/application.css:
+## *3.*Додавання стилів для підвалу
+
+Додайте рядки в кінець файлу `app/assets/stylesheets/application.css`:
+
 
 {% highlight css %}
 footer {
@@ -76,13 +78,14 @@ footer {
 }
 {% endhighlight %}
 
-try put more things into `footer`, then adjust it's position.
+спробуйте додати більше різних стилів до підвалу.
 
-## *4.*add style to button
+## *4.*Додавання стилів для кнопки
 
-open [http://localhost:3000/ideas/new](http://localhost:3000/ideas/new) and find the `Create Idea` button.
+Відкрийте [http://localhost:3000/ideas/new](http://localhost:3000/ideas/new) і знайдіть кнопку Create Idea.
 
-add these lines to app/assets/stylesheets/ideas.css.scss
+Додайте рядки в кінець файлу `app/assets/stylesheets/ideas.css.scss`
+
 
 {% highlight css %}
 .container input[type="submit"] {
@@ -94,4 +97,5 @@ add these lines to app/assets/stylesheets/ideas.css.scss
 }
 {% endhighlight %}
 
-**Coach:** explain how to use `border` in css, try modify the style of button like round the corner, add shadow or color etc.
+
+**Тренер:** поясніть, як використовувати рамки в css, спробуйте змінити стиль кнопки, наприклад закруглити, додати тінь або колір і т.д.
