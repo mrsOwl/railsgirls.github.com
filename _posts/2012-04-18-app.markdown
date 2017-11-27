@@ -426,4 +426,4 @@ get "pages/info"
 * Guide 7: [Тестування додатку з  RSpec](/testing-rspec)
 * Guide 8: [Continuous Deployment з Travis-CI](/continuous-travis) / [Continuous Deployment х Codeship](/continuous) / [Continuous Deployment з Snap CI](/continuous-snap-ci)
 * Guide 9: [Додаткові пояснення](https://github.com/lbain/railsgirls)
-* Guide 10: [Додавання back-end з Active Admin](/backend-with-active-admin)
+* Guide 10: [Створення back-end з Active Admin](/backend-with-active-admin)
