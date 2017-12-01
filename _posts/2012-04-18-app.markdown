@@ -56,7 +56,6 @@ some code
 
 <div class="os-specific">
 
-
 <div class="win">
 {% highlight sh %}
 mkdir projects
@@ -106,7 +105,7 @@ rails server
 
 Відкрий <http://localhost:3000> у браузері. Якщо використовуєш хмарний сервіс (як-от, Codenvy), використовуй функцію перегляду (дивись [інструкція встановлення](/install#using-a-cloud-service) за деталями).
 
-Маєш побачити сторінку з логотипом Rails і написом: "Welcome aboard. You’re riding Ruby on Rails!", що означає - твій застосунок готовий і запущений.
+Маєш побачити сторінку з логотипом Rails і написом: "Yay! You're on Rails!", що означає - твій застосунок готовий і запущений.
 
 Зваж у цьому вікні командний рядок не видно, адже ти зараз в сервері Rails. Командний рядок виглядає ось так:
 
@@ -146,7 +145,8 @@ rails generate scaffold idea name:string description:text picture:string
 Scaffold створює нові файли в папці проекту. Щоб все запрацювало, ми повинні виконати декілька команд, що оновлять базу даних і перезавантажать сервер.
 
 {% highlight sh %}
-bundle exec rake db:migrate
+rails db:migrate
+rails server
 {% endhighlight %}
 
 
@@ -163,7 +163,7 @@ bundle exec rake db:migrate
 Відкриємо `app/views/layouts/application.html.erb` в текстовому редакторі і над цією стрічкою
 
 {% highlight erb %}
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 {% endhighlight %}
 
 додамо
