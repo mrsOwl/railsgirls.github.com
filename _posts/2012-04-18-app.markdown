@@ -317,7 +317,7 @@ bundle exec rails generate uploader Picture
 Відкриємо `app/models/idea.rb` і під рядком
 
 {% highlight ruby %}
-class Idea < ApplicationRecord
+class Idea < ActiveRecord::Base
 {% endhighlight %}
 
 додамо
@@ -329,7 +329,7 @@ mount_uploader :picture, PictureUploader
 Відкриємо `app/views/ideas/_form.html.erb` і змінемо
 
 {% highlight erb %}
-<%= f.text_field :picture, id: :idea_picture  %>
+    <%= f.text_field :picture %>
 {% endhighlight %}
 
 на
@@ -376,7 +376,7 @@ root to: redirect('/ideas')
 Додамо статичну сторінку для нашого сайту, яка містить інформацію про автора цього сайту - тебе!
 
 {% highlight sh %}
-rails generate controller pages info
+bundle exec rails generate controller pages info
 {% endhighlight %}
 
 Ця команда створить нову папку в `app/views` з назвою `/pages` і у цій папці створимо файл `info.html.erb`, що буде твоєю сторінкою з інформацією.
