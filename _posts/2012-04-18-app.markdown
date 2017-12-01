@@ -191,8 +191,7 @@ rails generate scaffold idea name:string description:text picture:string
 Scaffold створює нові файли в папці проекту. Щоб все запрацювало, ми повинні виконати декілька команд, що оновлять базу даних і перезавантажать сервер.
 
 {% highlight sh %}
-rails db:migrate
-rails server
+bundle exec rake db:migrate
 {% endhighlight %}
 
 
@@ -209,7 +208,7 @@ rails server
 Відкриємо `app/views/layouts/application.html.erb` в текстовому редакторі і над цією стрічкою
 
 {% highlight erb %}
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 {% endhighlight %}
 
 додамо
