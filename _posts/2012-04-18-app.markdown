@@ -55,6 +55,52 @@ some code
 Тепер введи ці команди в термінал:
 
 <div class="os-specific">
+<div class="nix">
+{% highlight sh %}
+mkdir projects
+{% endhighlight %}
+
+<div>
+    <p>
+        Перевіремо , що папка <code>projects</code> створена, запустивши таку команду: <code>ls</code>. Маємо  побачити папку <code>projects</code> в терміналі. Тепер ти можеш перейти в папку <code>projects</code>, запустивши команду:
+    </p>
+</div>
+
+{% highlight sh %}
+cd projects
+{% endhighlight %}
+
+<div>
+    <p>
+        Перевіримо, чи ми в пустій папці, запустивши знову команду <code>ls</code>. Тепер створимо новий застосунок з назвою <code>railsgirls</code>, запустивши команду:
+    </p>
+</div>
+
+{% highlight sh %}
+rails new railsgirls
+{% endhighlight %}
+
+<div>
+    <p>
+        Це створить новий застосунок в папці <code>railsgirls</code>. Знову змінемо папку, що бути всередині нашого Rails застосунку, запустивши:
+    </p>
+</div>
+
+{% highlight sh %}
+cd railsgirls
+{% endhighlight %}
+
+<div>
+    <p>
+        Якщо запустити команду <code>ls</code>,то побачимо папки типу <code>app</code> і <code>config</code>. Тепер запустимо rails сервер, виконавши наступну команду:
+    </p>
+</div>
+
+{% highlight sh %}
+rails server
+{% endhighlight %}
+
+</div>
 
 <div class="win">
 {% highlight sh %}
