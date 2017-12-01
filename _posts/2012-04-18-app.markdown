@@ -163,7 +163,7 @@ bundle exec rake db:migrate
 Відкриємо `app/views/layouts/application.html.erb` в текстовому редакторі і над цією стрічкою
 
 {% highlight erb %}
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 {% endhighlight %}
 
 додамо
