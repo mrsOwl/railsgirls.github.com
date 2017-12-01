@@ -293,6 +293,7 @@ gem 'sqlite3'
 
 {% highlight ruby %}
 gem 'carrierwave'
+gem 'net-ssh'
 {% endhighlight %}
 
 **Ментор:** Поясни, що таке бібліотеки і чим вони корисні. Опиши, що таке відкрите програмне забезпечення.
@@ -308,25 +309,10 @@ bundle
 Тепер згенеруємо код для можливості завантаження файлів. В терміналі виконаємо:
 
 {% highlight sh %}
-rails generate uploader Picture
+bundle exec rails generate uploader Picture
 {% endhighlight %}
 
 Тепер запустимо сервер rails.
-
-Примітка: Можна запускати сервер в другому вікні терміналу.
-В будь-якому випадку тобі треба перезавантажити сервер rails.
-
-Якщо виводиться помилка, що завантажувач не може бути знайдений - додай такі рядки:
-
-{% highlight ruby %}
-gem 'net-ssh'
-{% endhighlight %}
-
-Якщо ти додав цей gem, виконай знову цю команду в терміналі:
-
-{% highlight sh %}
-bundle
-{% endhighlight %}
 
 Відкриємо `app/models/idea.rb` і під рядком
 
