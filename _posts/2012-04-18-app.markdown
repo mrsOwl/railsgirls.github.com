@@ -347,13 +347,13 @@ mount_uploader :picture, PictureUploader
 Відкриємо `app/views/ideas/_form.html.erb` і змінемо
 
 {% highlight erb %}
-<%= form.text_field :picture, id: :idea_picture  %>
+<%= f.text_field :picture, id: :idea_picture  %>
 {% endhighlight %}
 
 на
 
 {% highlight erb %}
-<%= form.file_field :picture, id: :idea_picture %>
+<%= f.file_field :picture, id: :idea_picture %>
 {% endhighlight %}
 
 В браузері додамо нову ідею з картинкою. Коли ти завантажиш картинку, вона виглядає не надто гарно, бо видно тільки шлях до файлу. Давай виправимо це.
@@ -417,13 +417,13 @@ get "pages/info"
 ## Додаткові інструкції
 
 * Guide 0: [Корисні команди для rails, ruby і т.д.](http://www.pragtob.info/rails-beginner-cheatsheet/)
-* Guide 1: [Додаємо коментарі](/commenting)
-* Guide 2: [Публікація сайту в інтернеті за допомогою heroku](/heroku) / [Публікація сайту в інтернеті за допомогою OpenShift](/openshift) / [Публікація сайту в інтернеті за допомогою anynines](/anynines) / [Публікація сайту в інтернеті за допомогою Trucker.io](/trucker)
-* Guide 3: [Створення зорбражень для перегляду](/thumbnails)
-* Guide 4: [Додавання дизайну з СSS i HTML](/design)
-* Guide 5: [Додавання автентифікації з Devise](/devise)
-* Guide 6: [Додавання картинок профілю з Gravatar](/gravatar)
-* Guide 7: [Тестування додатку з  RSpec](/testing-rspec)
-* Guide 8: [Continuous Deployment з Travis-CI](/continuous-travis) / [Continuous Deployment х Codeship](/continuous) / [Continuous Deployment з Snap CI](/continuous-snap-ci)
-* Guide 9: [Додаткові пояснення](https://github.com/lbain/railsgirls)
-* Guide 10: [Створення back-end з Active Admin](/backend-with-active-admin)
+* Guide 1: [Додаємо коментарі](/commenting.html)
+* Guide 2: [Публікація сайту в інтернеті за допомогою heroku](/heroku.html) / [Публікація сайту в інтернеті за допомогою OpenShift](/openshift.html) / [Публікація сайту в інтернеті за допомогою anynines](/anynines.html) / [Публікація сайту в інтернеті за допомогою Trucker.io](/trucker.html)
+* Guide 3: [Створення зорбражень для перегляду](/thumbnails.html)
+* Guide 4: [Додавання дизайну з СSS i HTML](/design.html)
+* Guide 5: [Додавання автентифікації з Devise](/devise.html)
+* Guide 6: [Додавання картинок профілю з Gravatar](/gravatar.html)
+* Guide 7: [Тестування додатку з  RSpec](/testing-rspec.html)
+* Guide 8: [Continuous Deployment з Travis-CI](/continuous-travis.html) / [Continuous Deployment х Codeship](/continuous.html) / [Continuous Deployment з Snap CI](/continuous-snap-ci.html)
+* Guide 9: [Додаткові пояснення](https://github.com/lbain/railsgirls.html)
+* Guide 10: [Створення back-end з Active Admin](/backend-with-active-admin.html)
