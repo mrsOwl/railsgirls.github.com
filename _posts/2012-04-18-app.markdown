@@ -55,14 +55,16 @@ some code
 Тепер введи ці команди в термінал:
 
 <div class="os-specific">
-<div class="nix">
+
+
+<div class="win">
 {% highlight sh %}
 mkdir projects
 {% endhighlight %}
 
 <div>
     <p>
-        Перевіремо , що папка <code>projects</code> створена, запустивши таку команду: <code>ls</code>. Маємо  побачити папку <code>projects</code> в терміналі. Тепер ти можеш перейти в папку <code>projects</code>, запустивши команду:
+        Перевіремо, що папка <code>projects</code> створена, запустивши таку команду: <code>dir</code>. Має бути папка <code>projects</code> в терміналі. Перейдемо в папку <code>projects</code>, запустивши команду:
     </p>
 </div>
 
@@ -72,7 +74,7 @@ cd projects
 
 <div>
     <p>
-        Перевіримо, чи ми в пустій папці, запустивши знову команду <code>ls</code>. Тепер створимо новий застосунок з назвою <code>railsgirls</code>, запустивши команду:
+        Ти можеш перевірити, що ти у пустій папці, запустивши знову команду <code>dir</code>. Тепер створимо новий застосунок з назвою <code>railsgirls</code>, запустивши команду:
     </p>
 </div>
 
@@ -92,17 +94,14 @@ cd railsgirls
 
 <div>
     <p>
-        Якщо запустити команду <code>ls</code>,то побачимо папки типу <code>app</code> і <code>config</code>. Тепер запустимо rails сервер, виконавши наступну команду:
+        Якщо запустити команду <code>dir</code> у цій папці побачимо папки типу <code>app</code> і <code>config</code>. Тепер запустимо rails сервер, виконавши наступну команду:
     </p>
 </div>
 
 {% highlight sh %}
 rails server
 {% endhighlight %}
-
-</div>
-
-
+  </div>
 </div>
 
 Відкрий <http://localhost:3000> у браузері. Якщо використовуєш хмарний сервіс (як-от, Codenvy), використовуй функцію перегляду (дивись [інструкція встановлення](/install#using-a-cloud-service) за деталями).
