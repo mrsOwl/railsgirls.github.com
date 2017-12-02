@@ -14,11 +14,11 @@ permalink: commenting
 
 Потрібно створити scaffold для сутності 'коментар', що містить: ім'я коментатора, власне коментар (текст), ну і посилання на ідею, якої стосується даний коментар (`idea_id`).
 {% highlight sh %}
-rails g scaffold comment user_name:string body:text idea_id:integer
+rails generate scaffold comment user_name:string body:text idea_id:integer
 {% endhighlight %}
 Ця команда створить, зокрема, сценарій *міграції*, що "повідомить" базу даних про те, що створюється нова таблиця з коментарями. Цю міграцію треба виконати, запустивши в терміналі команду
 {% highlight sh %}
-rails db:migrate
+bundle exec rake db:migrate
 {% endhighlight %}
 
 ## *2.*Додаємо зв'язки між моделями
@@ -28,7 +28,7 @@ rails db:migrate
 
 Відкрий файл `app/models/idea.rb` та одразу після рядка
 {% highlight ruby %}
-class Idea < ApplicationRecord
+class Idea < ActiveRecord::Base
 {% endhighlight %}
 додай
 {% highlight ruby %}
@@ -37,7 +37,7 @@ has_many :comments
 
 Моделі 'коментар' також потрібно вказати, що вона належить до 'ідеї' (звісно, що так - коментар не може існувати сам по собі). Отже, відкрий файл `app/models/comment.rb` та після рядка
 {% highlight ruby %}
-class Comment < ApplicationRecord
+class Comment < ActiveRecord::Base
 {% endhighlight %}
 
 додай
