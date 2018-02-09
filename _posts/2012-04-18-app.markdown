@@ -85,6 +85,10 @@ sudo apt-get install ruby-dev
 {% endhighlight %}
 
 {% highlight sh %}
+sudo apt-get install libffi-dev
+{% endhighlight %}
+
+{% highlight sh %}
 rails new railsgirls
 {% endhighlight %}
 
