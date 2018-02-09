@@ -77,6 +77,14 @@ cd projects
 </div>
 
 {% highlight sh %}
+sudo apt-get update
+{% endhighlight %}
+
+{% highlight sh %}
+sudo apt-get install ruby-dev
+{% endhighlight %}
+
+{% highlight sh %}
 rails new railsgirls
 {% endhighlight %}
 
@@ -401,7 +409,7 @@ get "pages/info"
 * Guide 0: [Корисні команди для rails, ruby і т.д.](http://www.pragtob.info/rails-beginner-cheatsheet/)
 * Guide 1: [Додаємо коментарі](/commenting.html)
 * Guide 2: [Публікація сайту в інтернеті за допомогою heroku](/heroku.html) / [Публікація сайту в інтернеті за допомогою OpenShift](/openshift.html) / [Публікація сайту в інтернеті за допомогою anynines](/anynines.html) / [Публікація сайту в інтернеті за допомогою Trucker.io](/trucker.html)
-* Guide 3: [Створення зорбражень для перегляду](/thumbnails.html)
+* Guide 3: [Створення зображень для перегляду](/thumbnails.html)
 * Guide 4: [Додавання дизайну з СSS i HTML](/design.html)
 * Guide 5: [Додавання автентифікації з Devise](/devise.html)
 * Guide 6: [Додавання картинок профілю з Gravatar](/gravatar.html)

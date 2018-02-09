@@ -54,7 +54,7 @@ We will be creating a test for ou `idea` model, to do that in the elegant way in
 
 * Create a `models` folder in your `spec` folder, by running in the terminal:
 {% highlight sh %}
-mkdir /spec/models
+mkdir spec/models
 {% endhighlight %}
 
 * Save your test as `idea_spec.rb` (`<model_name>_spec.rb`).

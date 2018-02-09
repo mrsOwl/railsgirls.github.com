@@ -71,8 +71,8 @@ rails g devise:install
 
 Ми використаємо bundled generator script для того, щоб створити модель користувача.
 {% highlight sh %}
-   rails g devise user
-   rails db:migrate
+   bundle exec rails g devise user
+   rake db:migrate
 {% endhighlight %}
 
 **Наставник:** Пояснити що було згенеровано. Що таке поля?
@@ -102,7 +102,7 @@ rails g devise:install
 {% endhighlight %}
 прямо над рядками
 {% highlight erb %}
-<ul class="nav">
+<ul class="nav navbar-nav">
   <li class="active"><a href="/ideas">Ideas</a></li>
 </ul>
 {% endhighlight %}

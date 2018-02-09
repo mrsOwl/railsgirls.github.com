@@ -375,7 +375,7 @@ Open `app/views/ideas/show.html.erb` and change
 to
 
 {% highlight erb %}
-<%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
+<%= image_tag(@idea.picture_url, width: 600) if @idea.picture.present? %>
 {% endhighlight %}
 
 Now refresh your browser to see what changed.

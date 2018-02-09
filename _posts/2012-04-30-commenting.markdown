@@ -49,7 +49,7 @@ belongs_to :idea
 
 Відкрий файл `app/views/ideas/show.html.erb` та після `image_tag`
 {% highlight erb %}
-<%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
+<%= image_tag(@idea.picture_url, width: 600) if @idea.picture.present? %>
 {% endhighlight %}
 
 додай
@@ -82,7 +82,7 @@ belongs_to :idea
 
 додай рядок
 {% highlight erb %}
-<%= form.hidden_field :idea_id %>
+<%= f.hidden_field :idea_id %>
 {% endhighlight %}
 
 і ще видали кілька зайвих рядків:

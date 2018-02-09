@@ -65,7 +65,7 @@ end
 `app/views/ideas/index.html.erb`. Заміни стрічку
 
 {% highlight erb %}
-<%= image_tag idea.picture_url, width: '100%' if idea.picture.present? %>
+<%= idea.picture %>
 {% endhighlight %}
 
 на
